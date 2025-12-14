@@ -91,6 +91,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/hasler4444/project 
-            docker compose pull 
-            docker compose up -d 
+            sudo docker compose pull 
+            sudo docker compose up -d 
         
