@@ -1,10 +1,10 @@
 services:
   api:
-    image: ghcr.io/IluhaProgrammer/fastapi-api:latest
+    image: ghcr.io/iluhaprogrammer/fastapi-api:latest
     restart: always
   
   nginx:
-    image: ghcr.io/IluhaProgrammer/fastapi-nginx:latest
+    image: ghcr.io/iluhaprogrammer/fastapi-nginx:latest
     ports:
       - "80:80"
     depends_on:
