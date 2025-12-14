@@ -2,6 +2,7 @@ services:
   api:
     image: ghcr.io/iluhaprogrammer/fastapi-api:latest
     restart: always
+    container_name: api
   
   nginx:
     image: ghcr.io/iluhaprogrammer/fastapi-nginx:latest
@@ -12,6 +13,7 @@ services:
     restart: always
     volumes:
       - nginx_data:/var/log/nginx:w
+    container_name: nginx
 
 volumes:
   nginx_data:
