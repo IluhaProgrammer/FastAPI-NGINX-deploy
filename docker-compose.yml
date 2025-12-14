@@ -1,0 +1,17 @@
+services:
+  api:
+    image: ghcr.io/IluhaProgrammer/fastapi-api:latest
+    restart: always
+  
+  nginx:
+    image: ghcr.io/IluhaProgrammer/fastapi-nginx:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    restart: always
+    volumes:
+      - nginx_data:/var/log/nginx:w
+
+volumes:
+  nginx_data:
