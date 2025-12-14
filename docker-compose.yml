@@ -2,6 +2,8 @@ services:
   api:
     image: ghcr.io/iluhaprogrammer/fastapi-api:latest
     restart: always
+    ports:
+      - "8000"
   
   nginx:
     image: ghcr.io/iluhaprogrammer/fastapi-nginx:latest
