@@ -1,18 +1,16 @@
 services:
-  project-api-1:
+  project-api:
     image: ghcr.io/iluhaprogrammer/fastapi-api:latest
     restart: always
-    ports:
-      - "8000"
     networks:
       - project_backend
   
-  project-nginx-1:
+  project-nginx:
     image: ghcr.io/iluhaprogrammer/fastapi-nginx:latest
     ports:
       - "80:80"
     depends_on:
-      - project-api-1
+      - project-api
     restart: always
     volumes:
       - project_nginx_data:/var/log/nginx:w
