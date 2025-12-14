@@ -89,7 +89,7 @@ jobs:
           host: ${{ secrets.VPS_HOST}}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_KEY }}
-          script:
+          script: |
             cd /home/hasler4444/project \
             docker compose pull \
             docker compose up -d 
